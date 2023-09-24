@@ -1,6 +1,6 @@
 <?php
 session_start();
-include './koneksi.php';
+include 'koneksi.php';
 
 if (isset($_POST['login'])) {
     $username = $_POST['user'];
@@ -21,3 +21,27 @@ if (isset($_POST['login'])) {
         echo 'salah';
     }
 }
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rawr</title>
+</head>
+
+<body>
+    <form action="index.php" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="user" />
+        <label for="password">password</label>
+        <input type="text" name="pass" />
+        <button name="login">login</button>
+    </form>
+</body>
+
+</html>
